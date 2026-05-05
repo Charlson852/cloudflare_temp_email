@@ -19,6 +19,9 @@
 
 ### Improvements
 
+- docs: |GitHub Actions / S3| Clarify that Worker variables for features such as Turnstile and R2/S3 attachments should be persisted in `BACKEND_TOML` and the repository secret when deploying via GitHub Actions, to avoid losing them on future redeploys
+- docs: |S3 Attachments| Add R2 endpoint guidance and the recommended GitHub Actions configuration path
+
 ## v1.8.0
 
 ### Features
@@ -44,6 +47,12 @@
 - refactor: |Worker| Split `mails_api/index.ts` and `admin_api/index.ts` so the index files only wire routes. Business logic moved into dedicated `*_api.ts` files (`mails_crud.ts` / `new_address.ts` / `parsed_mail_api.ts` / `address_api.ts` / `address_sender_api.ts` / `sendbox_api.ts` / `statistics_api.ts` / `account_settings_api.ts`). Paths and behavior unchanged
 
 ## v1.7.0
+=======
+- docs: |GitHub Actions / S3| Clarify that Worker variables for features such as Turnstile and R2/S3 attachments should be persisted in `BACKEND_TOML` and the repository secret when deploying via GitHub Actions, to avoid losing them on future redeploys
+- docs: |S3 Attachments| Add R2 endpoint guidance and the recommended GitHub Actions configuration path
+
+## v1.7.0(main)
+>>>>>>> 1cdae38 (docs: clarify Turnstile and R2/S3 deployment persistence)
 
 ### Breaking Changes
 

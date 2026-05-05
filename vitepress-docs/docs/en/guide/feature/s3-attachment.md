@@ -13,6 +13,10 @@ Reference: [Cloudflare R2 s3 token](https://developers.cloudflare.com/r2/api/s3/
 
 > [!NOTE]
 > You can also add `secrets` in the Cloudflare worker UI interface
+>
+> If you deploy the backend via GitHub Actions, it is recommended to put these values directly into `BACKEND_TOML`, then update the repository `BACKEND_TOML` secret and rerun `Deploy Backend`. This keeps S3/R2 attachment storage available after future Worker redeploys.
+>
+> A common R2 endpoint format is `https://<ACCOUNT_ID>.r2.cloudflarestorage.com`.
 
 ```bash
 cd worker

@@ -13,6 +13,10 @@
 
 > [!NOTE]
 > 你也可以在 Cloudflare worker 的 UI 界面中添加 `secrets`
+>
+> 如果你使用 GitHub Actions 部署后端，建议把这些值直接写进 `BACKEND_TOML`，再更新仓库的 `BACKEND_TOML` secret 并重新运行 `Deploy Backend`。这样可以保证 Worker 重建时也会自动带上 S3/R2 配置。
+>
+> R2 常见 endpoint 形态为 `https://<ACCOUNT_ID>.r2.cloudflarestorage.com`。
 
 ```bash
 cd worker

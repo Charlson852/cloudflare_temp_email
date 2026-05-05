@@ -19,6 +19,9 @@
 
 ### Improvements
 
+- docs: |GitHub Actions / S3| 补充说明：通过 GitHub Actions 部署时，Turnstile 与 R2/S3 等 Worker 变量应优先固化到 `BACKEND_TOML` 并更新仓库 secret，避免后续重部署丢配置
+- docs: |S3 附件| 补充 R2 endpoint 说明与 GitHub Actions 场景下的推荐配置方式
+
 ## v1.8.0
 
 ### Features
@@ -44,6 +47,12 @@
 - refactor: |Worker| 拆分 `mails_api/index.ts` 与 `admin_api/index.ts`，入口只负责挂路由，业务拆到各自的 `*_api.ts` 文件（`mails_crud.ts` / `new_address.ts` / `parsed_mail_api.ts` / `address_api.ts` / `address_sender_api.ts` / `sendbox_api.ts` / `statistics_api.ts` / `account_settings_api.ts`），保持路径与行为不变
 
 ## v1.7.0
+=======
+- docs: |GitHub Actions / S3| 补充说明：通过 GitHub Actions 部署时，Turnstile 与 R2/S3 等 Worker 变量应优先固化到 `BACKEND_TOML` 并更新仓库 secret，避免后续重部署丢配置
+- docs: |S3 附件| 补充 R2 endpoint 说明与 GitHub Actions 场景下的推荐配置方式
+
+## v1.7.0(main)
+>>>>>>> 1cdae38 (docs: clarify Turnstile and R2/S3 deployment persistence)
 
 ### Breaking Changes
 
